@@ -1,0 +1,51 @@
+header {
+  @include grid-container;
+  padding: {
+    top: 60px;
+    bottom: 20px;
+  }
+
+  div.container {
+    border-bottom: 1px solid $border-color;
+    padding-bottom: 20px;
+    overflow: hidden;
+
+    section.logo {
+      @include columns(2);
+    }
+
+    nav#header {
+      @include columns(7);
+
+      & > ul {
+        li {
+          float: left;
+          margin-left: 40px;
+
+          &:last-child {
+            color: red;
+          }
+
+          a {
+            color: $nav-color;
+            text-transform: uppercase;
+            text-decoration: none;
+            font: {
+              size: 1em;
+            }
+
+            &.current {
+              font: {
+                weight: bold;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    form#global-search {
+      @include columns(3);
+    }
+  }
+}

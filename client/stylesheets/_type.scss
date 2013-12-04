@@ -1,37 +1,28 @@
-// Colors
-
-$blue: #2E89EF;
-$light-blue: #9EC6F3;
-$dark-blue: #1759A4;
-$red: #FE5746;
-$green: #5FC137;
-
 // Typography
 
 $em: 16px;
 
-$sans: "Lato", 'Helvetica Neue', arial, sans-serif;
+$sans: 'Source Sans Pro', 'Helvetica Neue', arial, sans-serif;
 $serif: times, serif;
 
 body {
   font-family: $sans;
   color: #333;
   font-size: $em;
-  line-height: 2em;
+  line-height: 1.3rem;
 }
-
-h1, h2, h3,
 
 h1 {
   font: {
-    size: 2em;
-    weight: bold;
+    size: 1.875rem;
+    weight: normal;
   }
+  line-height: 2.375rem;
 }
 
 h2 {
   font: {
-    size: 1.6em;
+    size: 1.25em;
     weight: bold;
   }
 }

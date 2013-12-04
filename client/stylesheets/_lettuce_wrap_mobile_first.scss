@@ -1,11 +1,10 @@
+// Lettuce Wrap – a mobile first grid
+
 // Fixing the Box Model
 * {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
 }
-
-// Set the base text
-$em: 16px;
 
 // Responsive images
 img {
@@ -14,13 +13,13 @@ img {
 }
 
 // Base grid settings
-$max-width: 1140px;
-$column-margins: 10px;
+$max-width: 71.25em;
+$gutter: 0.625em;
 $total-columns: 12;
 
 // Responsive breakpoints
-$desktop: 30em;
-$tablet: 48em;
+$desktop: 60em;
+$tablet: 32em;
 $phone: 32em;
 
 // The Grid
@@ -42,30 +41,32 @@ $phone: 32em;
 
 // Set the number of columns to a row
 @mixin columns($columns) {
+  width: 100%;
   padding: {
-    left: $column-margins;
-    right: $column-margins;
+    left: 20px;
+    right: 20px;
   }
+  clear: both;
   float: left;
-  width: percentage($columns / $total-columns);
-  display: block;
 
-  @media only screen and (max-width: $phone) {
-    width: 100%;
+  @media only screen and (min-width: $desktop) {
     padding: {
-      left: 20px;
-      right: 20px;
+      left: $gutter;
+      right: $gutter;
     }
-    clear: both;
+    padding: 0;
+    width: percentage($columns / $total-columns);
+    display: block;
+    clear: none;
   }
 }
 
 // Push a set of columns across
 @mixin push($push) {
-  margin-left: percentage($push / $total-columns);
+  margin: 0;
 
-  @media only screen and (max-width: $phone) {
-    margin: 0;
+  @media only screen and (max-width: $desktop) {
+    margin-left: percentage($push / $total-columns);
   }
 }
 
@@ -75,11 +76,6 @@ $phone: 32em;
 }
 
 // Media Queries
-// Set a media query by device, with optional max-width or min-width modifer
-// Example:
-// @include media("phone") {
-//   attribute
-// } 
 @mixin media($device) {
   @if $device == "phone" {
     @media only screen and (max-width: $phone) {
@@ -88,7 +84,7 @@ $phone: 32em;
   }
 
   @if $device == "tablet" {
-    @media only screen and (max-width: $tablet) {
+    @media only screen and (min-width: $tablet) and (max-width: $desktop) {
       @content;
     }
   }

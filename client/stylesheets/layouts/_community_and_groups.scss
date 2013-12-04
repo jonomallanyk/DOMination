@@ -1,0 +1,43 @@
+section#community-and-groups {
+  @include grid-container;
+
+  & > header {
+    @include columns(12);
+  }
+
+  .call-to-action {
+    @include columns(6);
+    background: $light-grey;
+    height: 230px;
+  }
+
+  .hero {
+    @include columns(6);
+    background: $light-grey;
+    background: url('/images/banner.jpg') top left no-repeat;
+    background-size: cover;
+    height: 230px;
+    position: relative;
+
+    .hero-title {
+      background: $transparent-white;
+      padding: 20px;
+      max-width: 100%;
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+      left: 20px;
+
+      @include media("desktop") {
+        max-width: 380px;
+        right: 0;
+        bottom: 20px;
+        left: auto;
+      }
+    }
+
+    @include media("desktop") {
+      float: right;
+    }
+  }
+}

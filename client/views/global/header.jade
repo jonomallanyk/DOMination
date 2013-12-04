@@ -1,10 +1,17 @@
 template(name='header')
-  header
+  div.container
     section.logo
-      h1 Page Title
-    nav
+      h3 ICANN Labs
+    nav#header
       ul
-        li News
-        li Resources
-        li Policy
-        li Community &amp; Groups
+        li 
+          a(href='#') News
+        li 
+          a(href='#') Resources
+        li 
+          a(href='#') Policy
+        li 
+          a(href='#', class='current') Community &amp; Groups
+    form#global-search
+      input(type='text', placeholder='Search')
+      input(type='submit', value='Search')

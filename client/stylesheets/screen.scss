@@ -1,15 +1,23 @@
 // Foundations
 @import "reset";
-@import "lettuce-wrap";
+@import "lettuce_wrap";
+@import "type";
+@import "color";
+@import "ui";
 
+// Global
+@import "global/header";
+@import "global/footer";
 
+// Layouts
+@import "layouts/home";
+@import "layouts/resources";
+@import "layouts/policy";
+@import "layouts/community_and_groups";
 
-// Global Sections
-@import "header";
-@import "footer";
+// Sugar
+@import "animation";
 
-// Pages & Templates
-@import "pages/home";
-@import "pages/resources";
-@import "pages/policy";
-@import "pages/community-and-groups";
+main {
+  margin-bottom: 40px;
+}
