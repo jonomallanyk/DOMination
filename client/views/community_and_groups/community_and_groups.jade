@@ -7,3 +7,21 @@ template(name='communityAndGroups')
         h2 What are Working Groups about?
         p Groups are an amazing way to learn and connect with other people in Earth. Check groups out!
     section.call-to-action
+      h2 Get involved in the community
+      p Find, connect and collaborate with people and organizations around the topics and policy you care about.
+      a.button Join ICANN
+      p.help Already part of the ICANN community?
+      p.help Create a profile to show how you participate.
+    aside#search
+      form
+        p Find groups and people
+        input(type='text', placeholder='Search')
+        input(type='submit', value='Search')
+        a(href="#") Advanced Search
+    section#results
+      div.filter
+        p Seeing People related to All
+      ul
+        {{#each searchResult}}
+          {{> searchItem}}
+        {{/each}}

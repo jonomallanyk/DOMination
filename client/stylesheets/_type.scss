@@ -22,20 +22,38 @@ h1 {
 
 h2 {
   font: {
-    size: 1.25em;
+    size: 1.25rem;
     weight: bold;
   }
+  line-height: 1.4rem;
+  padding-bottom: 10px;
 }
 
 h3 {
   font: {
-    size: 1.2em;
+    size: 1.2rem;
     weight: normal;
   }
 }
 
 p {
   font: {
+    size: 1rem;
     weight: normal;
   }
+
+  &.help {
+    font: {
+      size: 0.75rem;
+    }
+    line-height: 0.9rem;
+  }
+}
+
+a {
+  font: {
+    size: 1rem;
+  }
+  text-decoration: none;
+  color: $link-color;
 }

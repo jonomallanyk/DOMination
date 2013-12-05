@@ -1,51 +1,53 @@
-header {
-  @include grid-container;
-  padding: {
-    top: 60px;
-    bottom: 20px;
-  }
-
-  div.container {
-    border-bottom: 1px solid $border-color;
-    padding-bottom: 20px;
-    overflow: hidden;
-
-    section.logo {
-      @include columns(2);
+body {
+  & > header {
+    @include grid-container;
+    padding: {
+      top: 60px;
+      bottom: 40px;
     }
 
-    nav#header {
-      @include columns(7);
+    div.container {
+      border-bottom: 1px solid $border-color;
+      padding-bottom: 20px;
+      overflow: hidden;
 
-      & > ul {
-        li {
-          float: left;
-          margin-left: 40px;
+      section.logo {
+        @include columns(1);
+      }
 
-          &:last-child {
-            color: red;
-          }
+      nav#header {
+        @include columns(8);
 
-          a {
-            color: $nav-color;
-            text-transform: uppercase;
-            text-decoration: none;
-            font: {
-              size: 1em;
+        & > ul {
+          li {
+            float: left;
+            margin-left: 60px;
+
+            &:last-child {
+              color: red;
             }
 
-            &.current {
+            a {
+              color: $nav-color;
+              text-transform: uppercase;
+              text-decoration: none;
               font: {
-                weight: bold;
+                size: 1em;
+              }
+
+              &.current {
+                font: {
+                  weight: bold;
+                }
               }
             }
           }
         }
       }
-    }
 
-    form#global-search {
-      @include columns(3);
+      form#global-search {
+        @include columns(3);
+      }
     }
   }
 }

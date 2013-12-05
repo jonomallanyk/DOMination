@@ -3,12 +3,16 @@ section#community-and-groups {
 
   & > header {
     @include columns(12);
+    margin: {
+      bottom: 20px;
+    }
   }
 
   .call-to-action {
     @include columns(6);
     background: $light-grey;
-    height: 230px;
+    height: 250px;
+    padding: 30px 20px 20px;
   }
 
   .hero {
@@ -16,7 +20,7 @@ section#community-and-groups {
     background: $light-grey;
     background: url('/images/banner.jpg') top left no-repeat;
     background-size: cover;
-    height: 230px;
+    height: 250px;
     position: relative;
 
     .hero-title {
@@ -38,6 +42,74 @@ section#community-and-groups {
 
     @include media("desktop") {
       float: right;
+    }
+  }
+
+  aside#search {
+    @include columns(3);
+    margin-top: 60px;
+
+    & > form {
+      a {
+        font-size: 0.8rem;
+        display: block;
+      }
+    }
+  }
+
+  section#results {
+    margin-top: 60px;
+
+    div.filter {
+      @include columns(9);
+      margin-top: 60px;
+      margin-bottom: 10px;
+
+      @include media("desktop") {
+        text-align: right;
+      }
+    }
+
+    ul {
+      @include columns(9);
+
+      li {
+        & > a.search-result {
+          width: 30%;
+          display: block;
+          float: left;
+          background: $component-background;
+          text-align: center;
+          padding: 40px 20px;
+          color: $dark-grey;
+
+          img {
+            margin: 0 auto 10px;
+            border-radius: 40px;
+          }
+
+          h3 {
+            color: $link-color;
+            font: {
+              weight: bold;
+              size: 1.25rem;
+            }
+          }
+
+          p {
+            color: $black;
+          }
+
+          p.tags {
+            font: {
+              size: 0.75rem;
+            }
+            color: $dark-grey;
+            margin-top: 40px;
+            text-transform: uppercase;
+          }
+        }
+      }
     }
   }
 }

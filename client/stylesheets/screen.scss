@@ -1,11 +1,14 @@
 // Foundations
 @import "reset";
 @import "lettuce_wrap";
-@import "type";
 @import "color";
-@import "ui";
+@import "type";
+
+// Mixins
+@import "mixins/buttons";
 
 // Global
+@import "global/ui";
 @import "global/header";
 @import "global/footer";
 

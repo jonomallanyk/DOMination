@@ -8,20 +8,21 @@
   display: inline-block;
 
   @if $style == "primary" {
-    height: 60px;
-    font-size: 1.2em;
-    font-weight: bold;
+    font-size: 1.25em;
     line-height: 28px;
     text-align: center;
     text-decoration: none;
+    text-transform: uppercase;
     color: #FFFFFF;
-    margin: 0px auto;
-    border-radius: 4px;
+    margin: {
+      top: 20px;
+      bottom: 20px;
+    }
     background: $button-color;
-    padding: 16px 50px;
+    padding: 8px 12px;
 
     &:hover {
-      background: darken($button-color, 20%)
+      background: lighten($button-color, 20%)
     }
   }
 

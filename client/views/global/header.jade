@@ -1,17 +1,13 @@
 template(name='header')
   div.container
     section.logo
-      h3 ICANN Labs
+      img(src='images/icannlogo.jpg')
     nav#header
       ul
-        li 
-          a(href='#') News
-        li 
-          a(href='#') Resources
-        li 
-          a(href='#') Policy
-        li 
-          a(href='#', class='current') Community &amp; Groups
+        li: a(href='#') News
+        li: a(href='#') Resources
+        li: a(href='#') Policy
+        li: a(href='#', class='current') Community &amp; Groups
     form#global-search
       input(type='text', placeholder='Search')
       input(type='submit', value='Search')
