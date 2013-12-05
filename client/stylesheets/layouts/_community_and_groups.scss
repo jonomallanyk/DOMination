@@ -91,10 +91,11 @@ section#community-and-groups {
   }
 
   section#results {
-    margin-top: 60px;
+    @include columns(9);
+    @include nesting;
 
     div.filter {
-      @include columns(9);
+      @include nested-columns(9, 9);
       margin-top: 60px;
       margin-bottom: 10px;
 
@@ -104,11 +105,10 @@ section#community-and-groups {
     }
 
     ul {
-      @include columns(9);
+      
 
       li {
         @include nested-columns(3, 9);
-
         & > a.search-result {
           width: 100%;
           display: block;
@@ -145,6 +145,18 @@ section#community-and-groups {
           }
         }
       }
+    }
+
+    div.more {
+      @include nested-columns(9, 9);
+      margin-top: 20px;
+      margin-bottom: 20px;
+      padding: {
+        top: 20px;
+        bottom: 20px;
+      }
+      text-align: center;
+      background: $component-background;
     }
   }
 }

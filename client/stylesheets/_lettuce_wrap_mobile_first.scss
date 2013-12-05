@@ -73,6 +73,13 @@ $phone: 32rem;
   }
 }
 
+@mixin nesting() {
+  padding: {
+    left: 0rem;
+    right: 0rem;
+  }
+}
+
 // Columns within a set of columns
 @mixin nested-columns($nested-columns, $container-columns) {
   width: 100%;
@@ -82,7 +89,8 @@ $phone: 32rem;
 
   @media only screen and (min-width: $tablet) {
     padding: {
-      left: $gutter * 2;
+      left: $gutter;
+      right: $gutter;
     }
     width: percentage($nested-columns / $container-columns);
     clear: none;
