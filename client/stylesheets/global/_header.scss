@@ -2,7 +2,7 @@ body {
   & > header {
     @include grid-container;
     padding: {
-      top: 60px;
+      top: 40px;
       bottom: 40px;
     }
 
@@ -17,6 +17,7 @@ body {
 
       nav#header {
         @include columns(8);
+        margin-top: 20px;
 
         & > ul {
           li {
@@ -47,6 +48,7 @@ body {
 
       form#global-search {
         @include columns(3);
+        margin-top: 20px;
       }
     }
   }

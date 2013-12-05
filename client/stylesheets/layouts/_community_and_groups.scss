@@ -54,6 +54,39 @@ section#community-and-groups {
         font-size: 0.8rem;
         display: block;
       }
+
+      fieldset {
+        margin-bottom: 20px;
+
+        legend {
+          font-size: 1rem;
+          color: $black;
+          margin-bottom: 10px;
+        }
+
+        ul {
+          li {
+            margin-bottom: 10px;
+
+            input[type="checkbox"] {
+              margin-right: 5px;
+            }
+          }
+        }
+
+        &.explore {
+          border-bottom: 1px solid $border-color;
+          padding-bottom: 10px;
+
+          legend {
+            font-weight: bold;
+          }
+
+          ul {
+
+          }
+        }
+      }
     }
   }
 
@@ -74,14 +107,16 @@ section#community-and-groups {
       @include columns(9);
 
       li {
+        @include nested-columns(3, 9);
+
         & > a.search-result {
-          width: 30%;
+          width: 100%;
           display: block;
-          float: left;
           background: $component-background;
           text-align: center;
           padding: 40px 20px;
           color: $dark-grey;
+          margin-bottom: 20px;
 
           img {
             margin: 0 auto 10px;

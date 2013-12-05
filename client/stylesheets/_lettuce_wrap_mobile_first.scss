@@ -6,6 +6,10 @@
   -moz-box-sizing: border-box;
 }
 
+body {
+  font-size: 16px;
+}
+
 // Responsive images
 img {
   max-width: 100%;
@@ -13,14 +17,14 @@ img {
 }
 
 // Base grid settings
-$max-width: 71.25em;
-$gutter: 0.625em;
+$max-width: 71.25rem;
+$gutter: 0.625rem;
 $total-columns: 12;
 
 // Responsive breakpoints
-$desktop: 60em;
-$tablet: 32em;
-$phone: 32em;
+$desktop: 60rem;
+$tablet: 32rem;
+$phone: 32rem;
 
 // The Grid
 @mixin grid-container() {
@@ -48,15 +52,14 @@ $phone: 32em;
   }
   clear: both;
   float: left;
+  display: block;
 
-  @media only screen and (min-width: $desktop) {
+  @media only screen and (min-width: $tablet) {
     padding: {
       left: $gutter;
       right: $gutter;
     }
-    padding: 0;
     width: percentage($columns / $total-columns);
-    display: block;
     clear: none;
   }
 }
@@ -65,8 +68,24 @@ $phone: 32em;
 @mixin push($push) {
   margin: 0;
 
-  @media only screen and (max-width: $desktop) {
+  @media only screen and (min-width: $tablet) {
     margin-left: percentage($push / $total-columns);
+  }
+}
+
+// Columns within a set of columns
+@mixin nested-columns($nested-columns, $container-columns) {
+  width: 100%;
+  clear: both;
+  float: left;
+  display: block;
+
+  @media only screen and (min-width: $tablet) {
+    padding: {
+      left: $gutter * 2;
+    }
+    width: percentage($nested-columns / $container-columns);
+    clear: none;
   }
 }
 
