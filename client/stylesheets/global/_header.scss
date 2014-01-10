@@ -22,6 +22,17 @@ body {
             }
           }
         }
+
+        @include media("tablet") {
+          @include columns(12);
+
+          img {
+            margin: {
+              left: auto;
+              right: auto;
+            }
+          }
+        }
       }
 
       nav#header {
@@ -29,6 +40,8 @@ body {
         margin-top: 20px;
 
         & > ul {
+          overflow: hidden;
+
           li {
             float: left;
             margin-left: 60px;
@@ -58,13 +71,34 @@ body {
               margin-left: 0;
               margin-bottom: 2px;
             }
+
+            @include media("tablet") {
+              width: 25%;
+              display: block;
+              margin-left: 0;
+              text-align: center;
+            }
           }
+        }
+
+        @include media("tablet") {
+          @include columns(12);
         }
       }
 
       form#global-search {
         @include columns(3);
         margin-top: 20px;
+
+        & > input[type='submit'] {
+          @include media("phone") {
+            display: none;
+          }
+
+          @include media("tablet") {
+            display: none;
+          }
+        }
 
         & > input[type='text'] {
           border: 1px solid $border-color;
@@ -81,6 +115,19 @@ body {
               right: auto;
             }
           }
+
+          @include media("tablet") {
+            display: block;
+            width: 50%;
+            margin: {
+              left: auto;
+              right: auto;
+            }
+          }
+        }
+
+        @include media("tablet") {
+          @include columns(12);
         }
       }
     }

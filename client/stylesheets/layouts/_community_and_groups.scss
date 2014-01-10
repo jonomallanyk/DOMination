@@ -13,6 +13,10 @@ section#community-and-groups {
     background: $light-grey;
     height: 250px;
     padding: 30px 20px 20px;
+
+    & > h2, p, a {
+      margin-left: 10px;
+    }
   }
 
   .hero {
@@ -38,6 +42,10 @@ section#community-and-groups {
         bottom: 20px;
         left: auto;
       }
+    }
+
+    @include media("tablet") {
+      float: right;
     }
 
     @include media("desktop") {
@@ -99,13 +107,20 @@ section#community-and-groups {
       margin-top: 60px;
       margin-bottom: 10px;
 
+      @include media("phone") {
+        margin-left: 20px;
+      }
+
+      @include media("tablet") {
+        text-align: right;
+      }
+
       @include media("desktop") {
         text-align: right;
       }
     }
 
     ul {
-      
 
       li {
         @include nested-columns(3, 9);
@@ -116,7 +131,7 @@ section#community-and-groups {
           text-align: center;
           padding: 40px 20px;
           color: $dark-grey;
-          margin-bottom: 20px;
+          margin-bottom: 10px;
 
           img {
             margin: 0 auto 10px;
@@ -143,6 +158,18 @@ section#community-and-groups {
             margin-top: 40px;
             text-transform: uppercase;
           }
+
+          // @include media("tablet") {
+          //   @include nested-columns(4, 4);
+          // }
+        }
+
+        @include media("tablet") {
+          margin-bottom: 10px;
+        }
+
+        @include media("desktop") {
+          margin-bottom: 10px;
         }
       }
     }
