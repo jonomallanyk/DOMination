@@ -2,7 +2,6 @@
 * Built on the Meteor JS framework, because I'm weird like that 
 * ~~HTML~~ Jade + Handlebars + ~~CSS~~ SCSS
 * Lettuce Wrap – a mobile first, percentage based grid built using SASS functions
-> @include columns(x);
 * Electronic music
 * Coffee
 
