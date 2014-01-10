@@ -1,15 +1,16 @@
 // Foundations
 @import "reset";
-@import "lettuce_wrap_mobile_first";
 @import "color";
 @import "type";
 
 // Mixins
+@import "mixins/lettuce_wrap";
 @import "mixins/buttons";
 
 // Global
 @import "global/ui";
 @import "global/header";
+@import "global/main";
 @import "global/footer";
 
 // Layouts
@@ -20,7 +21,3 @@
 
 // Sugar
 @import "animation";
-
-main {
-  margin-bottom: 40px;
-}

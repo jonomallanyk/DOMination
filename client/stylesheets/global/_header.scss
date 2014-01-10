@@ -13,6 +13,15 @@ body {
 
       section.logo {
         @include columns(1);
+
+        @include media("phone") {
+          img {
+            margin: {
+              left: auto;
+              right: auto;
+            }
+          }
+        }
       }
 
       nav#header {
@@ -23,10 +32,6 @@ body {
           li {
             float: left;
             margin-left: 60px;
-
-            &:last-child {
-              color: red;
-            }
 
             a {
               color: $nav-color;
@@ -42,6 +47,17 @@ body {
                 }
               }
             }
+
+            @include media("phone") {
+              display: block;
+              float: none;
+              padding: 20px;
+              text-align: center;
+              background: $light-grey;
+              width: 100%;
+              margin-left: 0;
+              margin-bottom: 2px;
+            }
           }
         }
       }
@@ -55,6 +71,15 @@ body {
           padding: 4px;
           font: {
             size: 1rem;
+          }
+
+          @include media("phone") {
+            display: block;
+            width: 100%;
+            margin: {
+              left: auto;
+              right: auto;
+            }
           }
         }
       }
