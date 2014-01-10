@@ -66,6 +66,48 @@ section#community-and-groups {
       fieldset {
         margin-bottom: 20px;
 
+        & > input, a {
+          @include media("desktop") {
+            margin-left: 10px;
+          }
+        }
+
+        & > input[type='text'] {
+          border: 1px solid $border-color;
+          padding: 8px;
+          font: {
+            size: 1rem;
+          }
+
+          @include media("phone") {
+            display: block;
+            width: 100%;
+            margin: {
+              left: auto;
+              right: auto;
+            }
+          }
+
+          @include media("tablet") {
+            display: block;
+            width: 100%;
+            margin: {
+              left: auto;
+              right: auto;
+            }
+          }
+        }
+
+        & > input[type='submit'] {
+          @include media("phone") {
+            display: none;
+          }
+
+          @include media("tablet") {
+            display: none;
+          }
+        }
+
         legend {
           font-size: 1rem;
           color: $black;
@@ -158,14 +200,11 @@ section#community-and-groups {
             margin-top: 40px;
             text-transform: uppercase;
           }
-
-          // @include media("tablet") {
-          //   @include nested-columns(4, 4);
-          // }
         }
 
         @include media("tablet") {
           margin-bottom: 10px;
+          width: 50%;
         }
 
         @include media("desktop") {
